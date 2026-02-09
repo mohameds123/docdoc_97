@@ -5,10 +5,10 @@ import 'package:docdocapp97/core/widgets/app_txt_feild.dart';
 import 'package:docdocapp97/features/auth/register/data/user_model.dart';
 import 'package:docdocapp97/features/auth/register/logic/cubit.dart';
 import 'package:docdocapp97/features/auth/register/logic/state.dart';
+import 'package:docdocapp97/features/home/presentation/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'home.dart';
 
 class RegisterScreen extends StatelessWidget {
   RegisterScreen({super.key});
@@ -28,7 +28,7 @@ class RegisterScreen extends StatelessWidget {
       child: BlocConsumer<RegisterCubit, RegisterStates>(
         listener: (context, state) {
           if (state is RegisterSuccessState){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>Home()));
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen(userName: state.userName,)));
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
                 content: Text(
