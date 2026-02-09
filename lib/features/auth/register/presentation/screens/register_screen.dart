@@ -2,6 +2,7 @@ import 'package:docdocapp97/core/utils/colors_manager.dart';
 import 'package:docdocapp97/core/utils/txt_style.dart';
 import 'package:docdocapp97/core/widgets/app_button.dart';
 import 'package:docdocapp97/core/widgets/app_txt_feild.dart';
+import 'package:docdocapp97/core/widgets/pass_txt_feild.dart';
 import 'package:docdocapp97/features/auth/register/data/user_model.dart';
 import 'package:docdocapp97/features/auth/register/logic/cubit.dart';
 import 'package:docdocapp97/features/auth/register/logic/state.dart';
@@ -89,14 +90,9 @@ class RegisterScreen extends StatelessWidget {
                       hintTxt: "Gender",
                       textEditingController: genderController,
                     ),
-                    AppTxtFeild(
-                      hintTxt: "Password",
-                      textEditingController: passwordController,
-                    ),
-                    AppTxtFeild(
-                      hintTxt: "Password Confirmation",
-                      textEditingController: passwordConfirmationController,
-                    ),
+                    PassTxtFeild(textEditingController: passwordController,hintTxt: "Password",),
+                    PassTxtFeild(textEditingController: passwordConfirmationController,hintTxt: "Confirmation Password",),
+
                     (state is RegisterLoadingState) ?Center(child: CircularProgressIndicator())  : AppButton(
                       buttonTxt: "Create Account",
                       function: () {
