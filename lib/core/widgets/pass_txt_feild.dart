@@ -28,7 +28,7 @@ class _PassTxtFeildState extends State<PassTxtFeild> {
           }, icon: Icon(showPass ? Icons.visibility : Icons.visibility_off)),
 
           hintText: widget.hintTxt,
-          hintStyle: TxtStyle.font14wight400Grey,
+          hintStyle: TxtStyle.size14Weight400Grey,
           fillColor:ColorsManager.txtFeildFillColor,
           filled: true,
           border: OutlineInputBorder(

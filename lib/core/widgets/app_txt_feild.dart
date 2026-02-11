@@ -22,7 +22,7 @@ class _AppTxtFeildState extends State<AppTxtFeild> {
       decoration: InputDecoration(
 
         hintText: widget.hintTxt,
-        hintStyle: TxtStyle.font14wight400Grey,
+        hintStyle: TxtStyle.size14Weight400Grey,
         fillColor:ColorsManager.txtFeildFillColor,
         filled: true,
         border: OutlineInputBorder(

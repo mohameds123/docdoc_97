@@ -71,10 +71,10 @@ class RegisterScreen extends StatelessWidget {
                   spacing: 12,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Create Account", style: TxtStyle.font24wight700Blue),
+                    Text("Create Account", style: TxtStyle.primaryTxtStyle),
                     Text(
                       "Sign up now and start exploring all that our app has to offer. We're excited to welcome you to our community!",
-                      style: TxtStyle.font14wight400Grey,
+                      style: TxtStyle.size14Weight400Grey,
                     ),
                     AppTxtFeild(
                       hintTxt: "Email",

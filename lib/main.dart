@@ -1,8 +1,11 @@
+import 'package:docdocapp97/core/helper/cach_helper.dart';
 import 'package:flutter/material.dart';
 
 import 'features/auth/register/presentation/screens/register_screen.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await CacheHelper.init();
   runApp(const MyApp());
 }
 
