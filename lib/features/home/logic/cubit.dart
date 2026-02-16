@@ -24,6 +24,7 @@ class HomeCubit extends Cubit<HomeStates> {
         emit(HomeSuccessState(homeData: data.data!));
       }
     } catch (e) {
+      print ("========== Home Error $e ===============");
       emit(HomeErrorState(errorMessage: e.toString()));
     }
   }

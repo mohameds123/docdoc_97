@@ -17,15 +17,19 @@ class RecommendationDoctor extends StatelessWidget {
     if (state is HomeLoadingState){
       return Center(child: CircularProgressIndicator(),);
     }else if (state is HomeSuccessState){
-      final allDocs = state.homeData.expand((s)=>s.doctors!).toList();
+      final allDocs = state.homeData
+          .expand((s) => s.doctors ?? [])
+          .toList();
       print(state.homeData.length);
       return SizedBox(
-        height: screenHeight * 0.22,
+        height: screenHeight * 0.35,
         child: ListView.builder(
           padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.005),
           scrollDirection: Axis.vertical,
           itemCount: allDocs.length,
           itemBuilder: (context, index) {
+            final doc = allDocs[index];
+
             return Padding(
               padding:  EdgeInsets.symmetric(vertical: screenHeight *  0.01),
               child: Row(
@@ -36,8 +40,8 @@ class RecommendationDoctor extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       spacing: 7,
                       children: [
-                        Text(state.homeData[index].doctors![index].name!, style: TxtStyle.size18Weight700Black),
-                        Text(state.homeData[index].name!, style: TxtStyle.size12Weight500Grey),
+                        Text(doc.name ?? "", style: TxtStyle.size18Weight700Black),
+                        Text(doc.specialization?.name ?? "", style: TxtStyle.size12Weight500Grey),
                         Row(
                             spacing: 5,
                             children: [

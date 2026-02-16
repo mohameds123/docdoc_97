@@ -43,6 +43,10 @@ class HomeScreen extends StatelessWidget {
               ),
 
               NearbyWidget(),
+
+              SizedBox(
+                height: 12,
+              ),
               Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
