@@ -39,6 +39,11 @@ class HomeScreen extends StatelessWidget {
                       backgroundColor: ColorsManager.overWhite,
                       child: Icon(Icons.notifications_outlined, color: ColorsManager.black,size: screenHeight * 0.033,),
                     ),
+                    CircleAvatar(
+                      radius: screenHeight * 0.032,
+                      backgroundColor: ColorsManager.overWhite,
+                      child: Icon(Icons.language, color: ColorsManager.black,size: screenHeight * 0.033,),
+                    ),
                   ]
               ),
 

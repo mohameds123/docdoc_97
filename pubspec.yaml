@@ -37,6 +37,7 @@ dependencies:
   dio: ^5.9.1
   flutter_bloc: ^9.1.1
   shared_preferences: ^2.5.3
+  easy_localization: ^3.0.8
 
 dev_dependencies:
   flutter_test:
@@ -64,6 +65,7 @@ flutter:
   assets:
     - assets/logo/
     - assets/images/
+    - assets/translations/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
