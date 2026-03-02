@@ -1,6 +1,7 @@
 
 
 import 'package:docdocapp97/features/home/logic/cubit.dart';
+import 'package:docdocapp97/features/recmmendation_doctors/presentation/screens/rec_doc_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/utils/colors_manager.dart';
@@ -66,7 +67,7 @@ class HomeScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text("Recommendation Doctor", style: TxtStyle.size18Weight600Black),
-                    Text("See All", style: TxtStyle.size12Weight400Primary),
+                    TextButton(child: Text("See All", style: TxtStyle.size12Weight400Primary),onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>RecDocScreen()));},),
                   ]
               ),
               SizedBox(height: screenHeight * 0.02,),
