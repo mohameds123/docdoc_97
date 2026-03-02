@@ -17,6 +17,7 @@ class HomeCubit extends Cubit<HomeStates> {
       final token = CacheHelper.getToken();
       final response = await dio.get(
         APIConst.home,
+
         options: Options(headers: {"Authorization": "Bearer $token"}),
       );
       if (response.statusCode == 200) {

@@ -18,7 +18,7 @@ class Data {
   String? token;
   String? username;
 
-  Data({this.token, this.username});
+  Data({required this.token, required this.username});
 
   Data.fromJson(Map<String, dynamic> json) {
     token = json['token'];
